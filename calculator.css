@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all .5s ease;
+}
+body{
+    font-family:'Covered By Your Grace', cursive;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background-image: linear-gradient(to bottom right, rgb(160, 134, 253,1), rgb(253, 200, 255));
+}
+.container{
+    height: 91.3vh;
+    width: 80vw;
+    display: grid;
+    place-items: center;
+}
+.calc{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 30px;/* calc k andr ki padding*/
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px #000;
+}
+.toggle-theme{ /* ye toggle button ki settings*/
+    position: absolute;
+    top:30px;
+    right: 30px;
+    color: rgb(222, 27, 125);
+    cursor: pointer;
+    z-index: 1;
+}
+.toggle-theme.active{
+    color: rgb(46, 5, 5);
+}
+
+.toggle-theme::before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border-color: rgb(18, 11, 11);
+    
+}
+.toggle-theme.active::before{
+    background-color: rgb(246, 231, 231); }
+#display{ /*ye hmari display screen*/
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+#display::-webkit-scrollbar{
+    display: block;
+    height: 3px;
+}
+button{
+    height: 60px;
+    width :60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+button:hover{
+    transform: scale(1.1);
+}
+button#equal {
+    height: 130px;
+}
+/* light theme */
+.calc{
+    background-color: rgba(121, 226, 252, 0.233);
+}
+.calc #display{
+    color: rgb(116, 154, 12);
+}
+.calc button#clear {
+    background-color:antiquewhite ;
+    color: red;
+}
+.calc button.btn-num{
+    background-color:rgb(245, 193, 244);
+    color:rgb(66, 11, 117) ;
+}
+.calc button#equal{
+    background-color: rgba(168, 169, 251, 0.92);
+}
+.calc button.btn-op{
+    background-color: rgba(125, 121, 241, 0.304);
+}
+/* dark theme */
+.calc.dark {
+    background-color: #333;
+}
+.calc.dark #display{
+    color: aliceblue;
+}
+.calc.dark button#clear{
+    background-color: rgb(114, 92, 134);
+}
+.calc.dark button#equal{
+    background-color: rgb(107, 87, 140);
+}
+.calc.dark button.btn-num{
+    background-color: rgba(174, 112, 184, 0.765);
+    color: azure;
+}
+.calc.dark button.btn-op{
+    background-color: rgba(148, 98, 151, 0.489);
+    color: rgba(74, 170, 254, 0.92);
+}
